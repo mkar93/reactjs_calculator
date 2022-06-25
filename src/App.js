@@ -1,6 +1,5 @@
 import { useState } from 'react';
 import { FaBackspace } from 'react-icons/fa';
-//import NumberFormat from "react-number-format";   //za prikaz zareza na 1000+ (1,000,000)
 
 function App() {
 
@@ -20,14 +19,14 @@ function App() {
     }
 
     //2nd leading(after operator) zero fix wtf
-    if(ops.some( ai => calc.includes(ai.slice(-3))) && calc.charAt(calc.length-2) == 0) {
-      if(calc.charAt(calc.length-1) == "." || (value >=0 && value <=9)) {
-        setCalc(calc + value)
-      }
-      else {
-        return;
-      }
-    }
+    //if(ops.some( ai => calc.includes(ai.slice(-3))) && calc.charAt(calc.length-2) == 0) {
+    //  if(calc.charAt(calc.length-1) == "." || (value >=0 && value <=9)) {
+    //    setCalc(calc + value)
+    //  }
+    //  else {
+    //    return;
+    //  }
+    //}
 
     //doesn't allow two operations or dot in a row or at start
     if((ops_all.includes(value) && calc === "") || (ops_all.includes(value) && ops_all.includes(calc.slice(-1)))) {
@@ -48,15 +47,12 @@ function App() {
 
     setCalc(calc + value);
 
-
-
     //za testiranje u konzoli
     console.log("value ", value)
     console.log("calc ", calc)
     console.log("result ", result)
 
   }
-
 
 
   //keypad buttons
@@ -73,12 +69,6 @@ function App() {
     }
     return digits;
   }
-
-  /* String.prototype.except = function(val) {
-    return this.filter(function(x) { return x !== val; });        
-  };            pokusaj funkcije za iskljucivanje elementa iz .includes*/
-
-
 
   //equals function
   const calculate = () => {
