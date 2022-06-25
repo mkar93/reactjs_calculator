@@ -1,0 +1,85 @@
+:root {
+    --primary: #424242;
+    --secondary: #252525;
+    --dark: #1f2022;
+    --light: rgb(163, 163, 163);
+  }
+  
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Fira Sans', sans-serif;
+  }
+  
+  body {
+    background-color: var(--light);
+  }
+  
+  .App {
+    display: flex;
+    min-height: 100vh;
+    align-items: center;
+    justify-content: center;
+    padding: 16px;
+  }
+  
+  .calculator {
+    width: 100%;
+    max-width: 350px;
+    background-color: rgb(34, 34, 34);
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0px 2px 64px rgba(0, 0, 0, 0.2);
+  }
+  
+  .display {
+    padding: 16px;
+    text-align: right;
+    background-color: rgb(34, 34, 34);
+    color: var(--light);
+    font-size: 30px;
+    font-weight: 300;
+  }
+  
+  .display span {
+    font-size: 14px;
+    color: #888;
+  }
+  
+  button {
+    appearance: none;
+    border: none;
+    outline: none;
+    color: rgb(219, 219, 219);
+    font-size: 20px;
+    padding: 16px;
+    cursor: pointer;
+    transition: 0.4s;
+    border-radius: 8px;
+  }
+  
+  .operators {
+    display: grid;
+    max-width: 25%;
+    margin-left: auto;
+    margin-right: 0;
+  }
+  
+  .operators button {
+    background-color: var(--primary);
+    font-weight: 700;
+    margin: 1px;
+  }
+  
+  .operators button:hover {
+    background-color: #636363;
+  }
+  
+  .extraoperators {
+    display: inline-block;
+    float: left;
+  }
+
+  /* margin-left: auto;
+  margin-right: 0; */
