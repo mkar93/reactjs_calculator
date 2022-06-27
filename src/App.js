@@ -19,12 +19,6 @@ function App() {
       return;
     }
 
-    if(opsOne.includes(calc.slice(-3, -1))) {
-      console.log("T E S T")
-      
-    }
-
-
     //2nd leading(after operator) zero fix wtf
     // if(ops.some( ai => calc.includes(ai.slice(-3))) && calc.charAt(calc.length-2) == 0) {
     //   if(calc.charAt(calc.length-1) == ".") {
